@@ -1,0 +1,597 @@
+:root {
+  --color-primario1: #8b4513;
+  --color-primario2: #d7a98c;
+  --color-fondo-blanco: #ffffff;
+  --color-fondo-gris: #d6cccc;
+  --color-fondo-pagina-al-abrir-ventana-modal: #696969;
+  --color-texto-negro: #000000;
+  --color-texto-grisOscuro: #696969;
+  --color-enlace-hover: #ffffff;
+  --color-enlace-fondo-hover: #b1b1b1;
+  --color-fondo-skip_navigation: #fffb00;
+  --color-foco: #175c37;
+  --color-primario1-botonCancelar: #c9302c;
+  --color-primario2-botonCancelar: #d9534f;
+  --color-fondo-cuadro-resumen-errores: #ffe6e6;
+  --color-resumenErrores: #0000ff;
+  --color-error: #ff0000;
+}
+
+/* ------------------------------------*/
+/* Estilos para el body                */
+/* ------------------------------------*/
+
+body {
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /*line-height: 1.5;*/
+}
+
+/* El <h1> no se muestra, pero sigue siendo legible para tecnologías de asistencia como lectores de pantalla.
+   Ideal para SEO y accesibilidad, útil cuando el <h1> es importante pero no se quiere mostrar visualmente.*/
+h1 {
+  font-size: 40px;
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+h2 {
+  font-size: 32px;
+  margin-top: 3rem;
+  padding: 10px;
+  /*border-top: 2px solid #000000;*/
+  color: var(--color-primario1);
+}
+
+ol {
+  font-size: 1.2em;
+  color: var(--color-primario1);
+}
+
+.linav {
+  line-height: 1.8; /* Ajusta el interlineado */
+  margin-bottom: 10px; /* Espaciado entre elementos */
+  margin-right: 40px;
+}
+
+span {
+  font-size: inherit; /* Hereda el tamaño del párrafo */
+  color: var(--color-texto-negro);
+}
+
+p {
+  font-size: 1.2em;
+}
+
+/* ------------------------------------*/
+/* Estilos para el encabezado (header) */
+/* ------------------------------------*/
+header {
+  display: flex;
+  width: 100%;
+}
+/* Estilos para el logotipo */
+.logotipo {
+  display: flex;
+  background-color: var(--color-fondo-gris);
+  justify-content: left;
+  width: 45%;
+  padding: 10px;
+  margin-left: 20px;
+}
+/* Estilos para la navegación */
+nav {
+  display: flex;
+  background-color: var(--color-fondo-gris);
+  justify-content: right;
+  margin-right: 20px;
+  align-items: flex-end;
+  width: 55%;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li a {
+  padding: 15px;
+  color: var(--color-primario1);
+}
+
+nav ul li a:hover {
+  color: var(--color-enlace-hover);
+  background-color: var(--color-enlace-fondo-hover);
+}
+
+/* ------------------------------------*/
+/* Estilos para los proyectos......... */
+/* ------------------------------------*/
+
+/* Estilos para las tarjetas */
+.tarjetas {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 85%;
+}
+
+/* Estilos para cada tarjeta de proyecto */
+.ide_proyecto {
+  min-width: 250px;
+  margin-bottom: 20px;
+  margin-left: 25px;
+  border: 2px solid var(--color-primario1);
+}
+
+.ide_proyecto img {
+  /*width: 100%;*/
+  width: 250px;
+  height: 200px;
+}
+
+/* Estilos para la información de proyecto */
+.info_proyecto {
+  padding: 10px;
+  font: 16px;
+  color: var(--color-primario1);
+  background-color: var(--color-fondo-gris);
+}
+
+.info_proyecto a {
+  color: var(--color-primario1);
+}
+
+.info_proyecto a:hover {
+  color: var(--color-enlace-hover);
+  background-color: var(--color-enlace-fondo-hover);
+}
+
+/* ------------------------------------*/
+/* Estilos para los testimonios ...... */
+/* ------------------------------------*/
+
+/* Estilos para las tarjetas de testimonios */
+.tarjetasTestimonios {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 85%;
+}
+
+/* Estilos para cada tarjeta de proyecto */
+.ide_testimonio {
+  min-width: 250px;
+  margin-bottom: 20px;
+  margin-left: 25px;
+  height: 100%;
+  border: 2px solid var(--color-primario1);
+  border-radius: 45px;
+  -webkit-border-radius: 45px;
+  -moz-border-radius: 45px;
+  -ms-border-radius: 45px;
+  -o-border-radius: 45px;
+}
+
+.persona_y_nombre_testimonio {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 85%;
+}
+
+/* Estilos para el logotipo */
+.imagen_persona_testimonio {
+  display: flex;
+  justify-content: left;
+  width: 15%;
+  height: 100%;
+  padding: 40px;
+  margin-left: 20px;
+  border-radius: 60%;
+  -webkit-border-radius: 60%;
+  -moz-border-radius: 60%;
+  -ms-border-radius: 60%;
+  -o-border-radius: 60%;
+}
+
+.nombre_persona_testimonio {
+  display: flex;
+  justify-content: left; /* Centra a la izquierda */
+  align-items: center; /* Centra verticalmente */
+  margin-right: 20px;
+  color: var(--color-primario1);
+  width: 20%;
+}
+
+.fecha_testimonio {
+  display: flex;
+  justify-content: left; /* Centra a la izquierda */
+  align-items: center; /* Centra verticalmente */
+  margin-right: 20px;
+  color: var(--color-primario1);
+  width: 50%;
+}
+
+.puntuacion_testimonio {
+  padding-left: 40px;
+  margin-left: 20px;
+  margin-top: -20px;
+  height: 20%;
+  width: 50%;
+}
+
+.testimonio {
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/* ------------------------------------*/
+/* Estilos para el saltar navegación.. */
+/* ------------------------------------*/
+
+.skip_navigation {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.skip_navigation:focus {
+  clip-path: inset(0%);
+  clip: auto;
+  height: auto;
+  width: auto;
+  top: 0;
+  padding: 1rem;
+  background-color: var(--color-fondo-skip_navigation);
+}
+
+/* ------------------------------------*/
+/* Estilos para el foco                */
+/* ------------------------------------*/
+
+:focus {
+  outline: 0.45em solid var(--color-foco);
+  outline-offset: 0.25em;
+}
+
+/* -------------------------------------------------*/
+/* Estilos para la seccion de solicitar presupuesto */
+/* -------------------------------------------------*/
+
+.divBotonSolicitarPresupuesto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Ajusta según necesidad al botón que incluye*/
+  width: 100%; /* Ajusta según necesidad al botón que incluye*/
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.botonSolicitarPresupuesto {
+  cursor: pointer;
+
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 35px;
+  padding-right: 35px;
+
+  font-size: 1.5em;
+  border: 3px;
+  border-color: var(--color-primario1);
+  border-style: solid;
+
+  background-color: var(--color-primario2);
+  color: var(--color-texto-negro);
+  cursor: pointer;
+  border-radius: 35px;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  -ms-border-radius: 35px;
+  -o-border-radius: 35px;
+}
+
+.botonSolicitarPresupuesto:hover {
+  background-color: var(--color-primario1);
+  color: var(--color-fondo-gris);
+}
+
+/* ------------------------------------*/
+/* Estilos para el footer              */
+/* ------------------------------------*/
+
+footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--color-fondo-gris);
+}
+
+.columnas {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las columnas pasen a la siguiente línea */
+  justify-content: space-between;
+  width: 100%;
+}
+
+.menufooter {
+  flex: 1;
+  width: 25%;
+}
+
+.iten1menufooter {
+  margin-top: 17px;
+  margin-bottom: 8px; /* Espaciado entre elementos */
+  margin-left: 30px;
+}
+
+.itennmenufooter {
+  margin-top: 17px;
+  margin-bottom: 8px; /* Espaciado entre elementos */
+  margin-left: 30px;
+}
+
+.itenultimomenufooter {
+  margin-top: 17px;
+  margin-bottom: 17px; /* Espaciado entre elementos */
+  margin-left: 30px;
+}
+
+.enlacesfooter {
+  color: var(--color-primario1);
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.enlacesfooter:hover {
+  color: var(--color-enlace-hover);
+  background-color: var(--color-enlace-fondo-hover);
+}
+
+.columnaEncabezadofooter {
+  color: var(--color-primario1);
+  font-size: 1.2em;
+}
+
+.bottonfooter {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.iten1bottonfooter {
+  margin-top: 17px;
+  margin-bottom: 8px; /* Espaciado entre elementos */
+  margin-left: 30px;
+  width: 33%;
+}
+
+.itennbottonfooter {
+  margin-top: 17px;
+  margin-bottom: 8px; /* Espaciado entre elementos */
+  margin-left: 30px;
+  width: 33%;
+}
+
+.bottonfooterlink {
+  flex: 1;
+}
+
+.bottonpage {
+  display: flex;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.itennbottonpage {
+  display: flex;
+  justify-content: center; /* Alinea el contenido horizontalmente */
+  align-items: center; /* Alinea el contenido verticalmente */
+  margin-top: 17px;
+  margin-bottom: 8px; /* Espaciado entre elementos */
+  margin-left: 30px;
+  width: 100%;
+}
+
+.desarrolladopor {
+  color: var(--color-primario1);
+}
+
+/* ------------------------------*/
+/* Estilos para la ventana modal */
+/* ------------------------------*/
+
+[role="dialog"] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  padding: 1em;
+  max-height: 80vh; /* Altura máxima del 10% de la pantalla */
+  max-width: 60vw; /* Anchura máxima del 80% de la pantalla */
+  /*background: #ddd;*/
+  background: var(--color-fondo-gris); /*fondo de la ventana modal*/
+  display: none;
+  border: 0;
+  overflow-y: auto; /* Habilita el scroll vertical si el contenido es largo */
+}
+
+[role="dialog"] * + * {
+  margin-top: 0.5em;
+}
+
+#botonCerrar {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  margin-top: 0;
+  line-height: 1;
+}
+
+[role="dialog"][open] {
+  display: block;
+}
+
+#cover {
+  /*background: red;*/
+  /*fondo de la página que incluye el boton "Solicitar presupuesto gratis"cuando se abre la ventana modal*/
+  background: var(--color-fondo-pagina-al-abrir-ventana-modal);
+  opacity: 0.75;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+}
+
+.claseh2formulario {
+  font-size: 32px;
+  margin-top: -1rem;
+  padding: 10px;
+  /*border-top: 2px solid #000000;*/
+  color: var(--color-primario1);
+}
+
+#formPresupuesto label,
+input {
+  display: block; /*para que ponga cada elemento en una línea*/
+}
+
+#descripcion,
+#formPresupuesto {
+  padding-left: 10px;
+  padding-right: 30px;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+input,
+select,
+textarea {
+  padding-left: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 0px;
+  font-size: 16px;
+  margin-top: 5px;
+  border: 2px solid var(--color-primario1);
+  border-radius: 5px;
+  width: 100%;
+}
+
+.claseBotonCerrar {
+  margin-top: 15px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: var(--color-texto-grisOscuro);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.claseBotonCerrar:hover {
+  background-color: var(--color-primario1);
+}
+
+.claseBotonEnviarSolicitud {
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+  margin-top: 15px;
+
+  font-size: 16px;
+  background-color: var(--color-primario2);
+  color: var(--color-texto-negro);
+  border: 2px;
+  border-color: var(--color-primario1);
+  border-style: solid;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.claseBotonEnviarSolicitud:hover {
+  background-color: var(--color-primario1);
+  color: var(--color-fondo-gris);
+}
+
+.claseBotonCancelar {
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+  margin-top: 15px;
+  font-size: 16px;
+  background-color: var(--color-primario2-botonCancelar);
+  color: var(--color-texto-negro);
+  border: 2px;
+  border-color: var(--color-primario1-botonCancelar);
+  border-style: solid;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.claseBotonCancelar:hover {
+  background-color: var(--color-primario1-botonCancelar);
+  color: var(--color-fondo-gris);
+}
+
+.h2cantidadErrores {
+  font-size: 32px;
+  margin-top: 0rem;
+  padding: 10px;
+  /*border-top: 2px solid #000000;*/
+  color: var(--color-texto-negro);
+}
+
+#resumenErrores {
+  color: yellow; /*no usado*/
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid var(--color-error);
+  background-color: var(--color-fondo-cuadro-resumen-errores);
+  display: none; /*no visible en un principio*/
+}
+
+#resumenErrores a {
+  color: var(--color-resumenErrores);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.mensaje-error {
+  color: var(--color-error);
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
